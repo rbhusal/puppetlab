@@ -52,7 +52,7 @@
     <!-- Static navbar -->
     {% if page.url contains "/ja/" %}{% include template/header_ja.html %}{% else %}{% include template/header_en.html %}{% endif %}
 
-
+    <!-- Doc switchers -->
     <div id="doc-switchers" class="container">
       <div class="col-md-8">{% include template/doc_switcher.html %}</div>
       <div class="col-md-4"></div>
@@ -60,6 +60,7 @@
 
     <div class="container">
 
+      <!-- Main content (there's no sidebar nav) -->
       <div id="content" class="main-content col-xs-12 col-md-12 col-lg-12">
         <div id="rendered-markdown">
           {{ content }}
