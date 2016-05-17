@@ -88,7 +88,7 @@ documents:
   /pe/2016.1:
     doc: pe
     version: 2016.1
-    nav: ./_pe_toc.html
+    nav: /_includes/overrides/pe2016.1.html
     external_source:
       repo: git@github.com:puppetlabs/pe-docs-private.git
       commit: origin/pe2016.1.2
@@ -103,7 +103,7 @@ documents:
   /pe/2015.3:
     doc: pe
     version: 2015.3
-    nav: ./_pe_toc.html
+    nav: /_includes/overrides/pe2015.3.html
     external_source:
       repo: git@github.com:puppetlabs/pe-docs-private.git
       commit: origin/pe2015.3.3
@@ -117,7 +117,7 @@ documents:
   /pe/2015.2:
     doc: pe
     version: 2015.2
-    nav: ./_pe_toc.html
+    nav: /_includes/overrides/pe2015.2.html
     external_source:
       repo: git@github.com:puppetlabs/pe-docs-private.git
       commit: origin/pe2015.2.3
@@ -131,7 +131,7 @@ documents:
   /pe/3.8:
     doc: pe
     version: 3.8
-    nav: ./_pe_toc.html
+    nav: /_includes/overrides/pe3.8.html
     external_source:
       repo: git@github.com:puppetlabs/pe-docs-private.git
       commit: origin/pe3.8.5
@@ -145,7 +145,7 @@ documents:
   /pe/3.7:
     doc: pe
     version: 3.7
-    nav: ./_pe_toc.html
+    nav: /_includes/overrides/pe3.7.html
     external_source:
       repo: git@github.com:puppetlabs/pe-docs-private.git
       commit: origin/pe3.7
