@@ -1,12 +1,9 @@
-{% capture facterversion %}3.1{% endcapture %}
-
-<h3>Facter {{ facterversion }}</h3>
+<h3 id="facter-sidebar-nav">Facter {{ site.document_list[facter].version }}</h3>
 
 <ul>
-<li><a href="/facter/{{ facterversion }}/core_facts.html">Core Facts</a></li>
-<li><a href="/facter/{{ facterversion }}/fact_overview.html">Custom Fact Overview/Reference</a></li>
-<li><a href="/facter/{{ facterversion }}/custom_facts.html">Custom Fact Walkthrough</a></li>
-<li><a href="/facter/{{ facterversion }}/custom_facts.html#external-facts">External Facts</a></li>
-<li><a href="/facter/{{ facterversion }}/release_notes.html">Release Notes</a></li>
-<li><a href="/facter/">Other Versions</a></li>
+<li><a href="{{facter}}/core_facts.html">Core Facts</a></li>
+<li><a href="{{facter}}/fact_overview.html">Custom Fact Overview/Reference</a></li>
+<li><a href="{{facter}}/custom_facts.html">Custom Fact Walkthrough</a></li>
+<li><a href="{{facter}}/custom_facts.html#external-facts">External Facts</a></li>
+<li><a href="{{facter}}/release_notes.html">Release Notes</a></li>
 </ul>
