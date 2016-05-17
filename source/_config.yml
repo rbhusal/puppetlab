@@ -205,7 +205,7 @@ documents:
   /pe/2.0:
     doc: pe
     version: 2.0
-    nav: /_includes/pe_2.0_nav.markdown
+    nav: /_includes/pe_2.0_nav.html
     hide: true
 
   /puppet/4.4/reference:
