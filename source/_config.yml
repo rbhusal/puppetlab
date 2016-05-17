@@ -406,7 +406,7 @@ documents:
   /puppetdb/4.0:
     doc: puppetdb
     version: 4.0
-    nav: ./_puppetdb_nav.html
+    nav: /_includes/overrides/puppetdb_4.0.html
     external_source:
       repo: git://github.com/puppetlabs/puppetdb.git
       commit: origin/stable
