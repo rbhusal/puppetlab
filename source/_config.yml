@@ -352,7 +352,7 @@ documents:
   /puppetserver/2.3:
     doc: puppetserver
     version: 2.3
-    nav: /puppet/4.4/reference/_puppet_toc.html
+    nav: /_includes/overrides/server2.3.html
     external_source:
       repo: git://github.com/puppetlabs/puppetserver.git
       commit: 7365ebc
@@ -364,7 +364,7 @@ documents:
   /puppetserver/2.2:
     doc: puppetserver
     version: 2.2
-    nav: /puppet/4.3/reference/_puppet_toc.html
+    nav: /_includes/overrides/server2.2.html
     external_source:
       repo: git://github.com/puppetlabs/puppetserver.git
       commit: puppet-server-2.2.1
@@ -376,7 +376,7 @@ documents:
   /puppetserver/2.1:
     doc: puppetserver
     version: 2.1
-    nav: /_includes/puppet4.2.html
+    nav: /_includes/overrides/server2.1.html
     external_source:
       repo: git://github.com/puppetlabs/puppetserver.git
       # This is a tag:
@@ -393,7 +393,7 @@ documents:
   /puppetserver/1.1:
     doc: puppetserver
     version: 1.1
-    nav: /_includes/puppet_3_8.html
+    nav: /_includes/server1.0.html # Nav had no changes in 1.1.
     external_source:
       repo: git://github.com/puppetlabs/puppetserver.git
       commit: origin/1.x
