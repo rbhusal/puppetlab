@@ -244,6 +244,10 @@ documents:
     doc: puppet
     version: 4.0
     nav: /_includes/puppet_4.html
+    my_versions:
+      facter: 2.4
+      hiera: 2.0
+      puppetserver: 2.0
   /puppet/3.8/reference:
     doc: puppet
     version: 3.8
