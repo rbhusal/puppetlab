@@ -1,0 +1,17 @@
+{% comment %} Since the magic URL variables match the keys in the document_list
+hash, we can just piggyback on existing logic that determines what documents
+we're related to. {% endcomment %}
+
+{% assign pe_nav = site.document_list[pe].nav %}
+{% assign puppet_nav = site.document_list[puppet].nav %}
+{% assign facter_nav = site.document_list[facter].nav %}
+{% assign hiera_nav = site.document_list[hiera].nav %}
+{% assign puppetserver_nav = site.document_list[puppetserver].nav %}
+{% assign puppetdb_nav = site.document_list[puppetdb].nav %}
+
+{% partial {{pe_nav}} %}
+{% partial {{puppet_nav}} %}
+{% partial {{facter_nav}} %}
+{% partial {{hiera_nav}} %}
+{% partial {{puppetserver_nav}} %}
+{% partial {{puppetdb_nav}} %}
