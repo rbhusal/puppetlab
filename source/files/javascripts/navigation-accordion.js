@@ -76,7 +76,7 @@ $( document ).ready( function() {
         var thisNavList = $(element);
         if ( thisNavList.find(navSubLists).length > 0 ) {
             // Add the toggle control
-            thisNavList.before( '<p style="text-align: center;"><a href="#" class="toggle-all-nav-sections">(↓ expand all ↓)</a></p>' );
+            thisNavList.before( '<p style="text-align: center;" class="collapse in"><a href="#" class="toggle-all-nav-sections">(↓ expand all ↓)</a></p>' );
             // Wire up the click to the <a> in the toggle control
             thisNavList.prev().children('a').on('click', function(e) {
                 e.preventDefault();
@@ -96,7 +96,20 @@ $( document ).ready( function() {
 
 
     // Mark top-level nav lists as collapsable.
-    navLists.addClass('collapse').addClass('in');
+    navLists.addClass('collapse in');
+    navHeaders.addClass('expanded-nav');
+
+    // If the nav header has a link, ignore it.
+    navHeaders.children('a').on('click', function(e) { e.preventDefault(); });
+    // If you click a nav header, collapse its nav.
+    navHeaders.on('click', function(e) {
+        toggleSection( $(this), $(this).nextUntil(navHeaders) );
+    });
+    // Collapse nav headers by default in non-active docs.
+    navHeaders.filter(function(index, element) {
+        return $(element).nextUntil(navHeaders).find(navLinksToCurrentPage).length < 1;
+    }).trigger('click');
+
 
 
 });
