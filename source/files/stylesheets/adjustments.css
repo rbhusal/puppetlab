@@ -1,3 +1,29 @@
+h2.expanded-nav::before, h3.expanded-nav::before, h4.expanded-nav::before {
+  color: #777;
+  content: "-";
+  position: relative;
+  left: -.75em;
+  display: inline-block;
+  width: .1em;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+h2.hidden-nav::before, h3.hidden-nav::before, h4.hidden-nav::before {
+  color: #777;
+  content: "+";
+  position: relative;
+  left: -.75em;
+  display: inline-block;
+  width: .1em;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+li.expanded-nav::before, li.hidden-nav::before {
+  cursor: pointer;
+}
+
 /* NF: Inline images should have an outer glow for legibility, especially in cases where we have screenshots of browser-rendered text. */
 div#rendered-markdown li img,
 div#rendered-markdown p img {
