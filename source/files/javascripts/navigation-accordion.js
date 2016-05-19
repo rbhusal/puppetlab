@@ -29,6 +29,7 @@ $( document ).ready( function() {
     navLinksToCurrentPage.addClass("disabled-nav-link");
     navLinksToCurrentPage.on("click", function(e) { e.preventDefault(); } );
 
+    // Generic functions for collapsing something and twiddling a ± button at the same time
     var toggleSection = function(label, target) {
         label.toggleClass("hidden-nav expanded-nav");
         target.collapse('toggle');
@@ -42,12 +43,25 @@ $( document ).ready( function() {
         target.collapse('show');
     };
 
-
     // Allow nav sections to toggle their sublist if you click the ± sign or label
-    navSections.on("click", function(e) {
-        if (e.target === this || e.target === $(this).children('strong')[0]) {
+    navSections.on( {
+        "click": function(e) {
+            if (e.target === this || e.target === $(this).children('strong')[0]) {
+                e.stopPropagation();
+                $(this).trigger('toggleSection');
+            }
+        },
+        "toggleSection": function(e) {
             e.stopPropagation();
             toggleSection( $(this), $(this).children('ul') );
+        },
+        "hideSection": function(e) {
+            e.stopPropagation();
+            hideSection( $(this), $(this).children('ul') );
+        },
+        "showSection": function(e) {
+            e.stopPropagation();
+            showSection( $(this), $(this).children('ul') );
         }
     });
 
@@ -56,6 +70,30 @@ $( document ).ready( function() {
     navSections.addClass("hidden-nav");
     // Uncollapse the active ones.
     activeNavSections.trigger('click');
+
+    // Add a "toggle all" control for each nav list with at least one sub-list.
+    navLists.each( function(index, element) {
+        var thisNavList = $(element);
+        if ( thisNavList.find(navSubLists).length > 0 ) {
+            // Add the toggle control
+            thisNavList.before( '<p style="text-align: center;"><a href="#" class="toggle-all-nav-sections">(↓ expand all ↓)</a></p>' );
+            // Wire up the click to the <a> in the toggle control
+            thisNavList.prev().children('a').on('click', function(e) {
+                e.preventDefault();
+                var toggleButton = $( this )
+                if ( toggleButton.text() === '(↓ expand all ↓)' ) {
+                    thisNavList.find(navSections).trigger("showSection");
+                    toggleButton.text('(↑ collapse all ↑)');
+                } else {
+                    thisNavList.find(navSections).trigger("hideSection");
+                    toggleButton.text('(↓ expand all ↓)');
+                }
+            });
+        }
+    });
+
+
+
 
     // Mark top-level nav lists as collapsable.
     navLists.addClass('collapse').addClass('in');
