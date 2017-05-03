@@ -1,0 +1,213 @@
+<h3>Learning about Puppet Enterprise and open source Puppet</h3>
+
+{% md %}
+
+* **Overview**
+    * **Puppet Enterprise**
+        * [Welcome to PE](./index.html)
+        * [PE architecture overview](./pe_architecture_overview.html)
+        * [Component versions in recent PE releases](./overview_version_table.html)
+        * [Getting support](./overview_getting_support.html)
+        * [PE version numbers](./pe_versioning.html)
+    * **Open source Puppet**
+        * TBD - Welcome to open source Puppet
+        * [Overview of Puppet's architecture]({{puppet}}/architecture.html)
+    * **PuppetEnterprise quick start guides**
+        * **[Quick start guide for *nix users](./quick_start.html)**
+            * [1: Install PE](./quick_start_install_mono.html)
+            * [2: Install agents](./quick_start_install_agents_nix.html)
+            * [3: Module install](./quick_start_module_install_nix.html)
+            * [4: Add classes](./quick_start_adding_class_nix.html)
+            * [5: Give users access](./quick_start_nc_rbac.html)
+            * [6: Write modules](./quick_writing_nix.html)
+        * **[Quick start guide for Windows users](./quick_start_windows_intro.html)**
+            * [1: Install PE](./quick_start_install_mono.html)
+            * [2: Install agents](./quick_start_install_agents_windows.html)
+            * [3: Module install](./quick_start_module_install_windows.html)
+            * [4: Classify agents](./quick_start_adding_class_windows.html)
+            * [5: Assign user access](./quick_start_rbac_windows.html)
+            * [6: Write modules](./quick_writing_windows.html)
+        * **[Essential configuration tasks](./quick_start_essential_config.html)**
+            * [NTP quick start guide](./quick_start_ntp.html)
+            * [DNS quick start guide](./quick_start_dns.html)
+            * [SSH quick start guide](./quick_start_ssh.html)
+            * [Sudo quick start guide](./quick_start_sudo.html)
+            * [Firewall quick start guide](./quick_start_firewall.html)
+    * **Open source Puppet quick start guides**
+        * **[Quick start intro for *nix users]({{puppet}}/quick_start.html)**
+            * [1: Creating users and groups]({{puppet}}/quick_start_user_group.html)
+            * [2: Hello, world!]({{puppet}}/quick_start_helloworld.html)
+            * [3: Module installation]({{puppet}}/quick_start_module_install_nix.html)
+            * [4: Adding classes]({{puppet}}/quick_start_adding_classes_nix.html)
+            * [5: Writing modules]({{puppet}}/quick_writing_nix.html)
+        * **[Essential configuration tasks]({{puppet}}/quick_start_essential_config.html)**
+            * [NTP quick start guide]({{puppet}}/quick_start_ntp.html)
+            * [DNS quick start guide]({{puppet}}/quick_start_dns.html)
+            * [Sudo quick start guide]({{puppet}}/quick_start_sudo.html)
+            * [Firewall quick start guide]({{puppet}}/quick_start_firewall.html)
+            
+<h3>Installing, upgrading, and migrating Puppet Enterprise and Puppet</h3>
+
+
+* **Release notes**
+    * **Puppet Enterprise**
+        * [New features and enhancements](./release_notes.html)
+        * [Known issues](./release_notes_known_issues.html)
+            * [Install and upgrade](./release_notes_known_issues_install.html)
+            * [PE console and console services](./release_notes_known_issues_console.html)
+            * [Puppet Server](./release_notes_known_issues_puppetserver.html)
+            * [Databases and PostgreSQL](./release_notes_known_issues_puppetdb.html)
+            * [Orchestration services](./release_notes_known_issues_app.html)
+            * [PE services and Puppet core](./release_notes_known_issues_core.html)
+            * [Supported platforms](./release_notes_known_issues_platforms.html)
+            * [Razor](./release_notes_known_issues_razor.html)
+            * [Code management](./release_notes_known_issues_codemgmt.html)
+            * [UTF-8](./release_notes_known_issues_utf8.html)
+            * [High availability](./release_notes_known_issues_ha.html)
+        * [Resolved issues](./release_notes_resolved_issues.html)
+    * **Puppet**
+        * [Puppet {{ puppet_version }} release notes]({{puppet}}/release_notes.html)
+        * [Puppet agent release notes]({{puppet}}/release_notes_agent.html)
+        * [Puppet Server {{ server_version }} release notes]({{puppetserver}}/release_notes.html)
+        * [puppet-agent: What is it, what's in it?]({{puppet}}/about_agent.html)
+        * [Where did everything go?]({{puppet}}/whered_it_go.html)
+* **Installing**
+    * **Installing PE**
+        * **System requirements**
+            * [Hardware requirements](./sys_req_hw.html)
+            * [Supported operating systems](./sys_req_os.html)
+            * [Supported browsers](./sys_req_browsers.html)
+            * [System config and firewall requirements](./sys_req_sysconfig.html)
+        * [What gets installed where?](./install_what_and_where.html)
+        * [Downloading PE and installing overview](./install_basic.html)
+        * [Web-based installation: monolithic](./install_pe_mono.html)
+        * **Text-mode installation**
+            * [Text-mode installation overview](./install_text_mode.html)
+            * [Text-mode installation: monolithic](./install_text_mode_mono.html)
+            * [Text-mode installation: split](./install_text_mode_split.html)
+            * [Configuration settings in pe.conf](./install_pe_conf_param.html)
+        * [Purchasing and installing the PE license key](./install_license_key.html)
+        * **Installing agents**
+            * [Installing agents: *nix](./install_agents.html)
+            * [Installing agents: Windows](./install_windows.html)
+            * [Installing agents: Mac OS X](./install_osx.html)
+        * **Installing network device agents**
+            * [Installing agents: Arista EOS](./install_eos.html)
+            * [Installing agents: Cisco NS-OX](./install_nxos.html)
+            * [Installing agents: Cisco IOS-XR](./install_iosxr.html)
+            * [Installing agents: Cumulus Linux](./install_cumulus.html)
+            * [Installing agents: Huawei CloudEngine](./install_huawei_ce.html)
+        * [Installing compile masters](./install_multimaster.html)
+        * [Load balancing compile masters](./install_lei_load.html)
+        * [Installing ActiveMQ hubs and spokes](./install_add_activemq.html)
+        * [Installing PE client tools](./install_pe_client_tools.html)
+        * [Uninstalling PE](./install_uninstalling.html)
+        * **PE and external PostgreSQL Setup**
+            * [External PostgreSQL prep](./sys_req_extsql.html)
+            * [SSL for PE and external PostgreSQL](./install_ssl_postgresql.html)
+            * [PE and external PostgreSQL without root access](./install_external_postgresql.html)
+        * [Troubleshooting the installer](./trouble_install.html)
+    * **Installing Puppet**
+        * [System requirements]({{puppet}}/system_requirements.html)
+        * [Pre-install tasks]({{puppet}}/install_pre.html)
+        * [Puppet Collection repositories]({{puppet}}/puppet_collections.html)
+        * [Install: Puppet Server]({{puppetserver}}/install_from_packages.html)
+        * **Install: Puppet agent**
+            * [Install agent: Linux]({{puppet}}/install_linux.html)
+            * [Install agent: Windows]({{puppet}}/install_windows.html)
+            * [Install agent: macOS]({{puppet}}/install_osx.html)
+        * [Install: PuppetDB]({{puppetdb}}/install_via_module.html)
+* **Upgrading**
+    * **Upgrading PE**
+        * [Upgrading PE: monolithic](./upgrade_mono.html)
+        * [Upgrading PE: split](./upgrade_split.html)
+        * [Upgrading PE agents: *nix](./install_upgrading_agents.html)
+        * [Upgrading PE agents: Windows](./upgrade_windows.html)
+    * **Upgrading Puppet**
+        * [Upgrade: From Puppet 4.x]({{puppet}}/upgrade_minor.html)
+        * **Upgrade: From Puppet 3.x**
+            * [Get upgrade-ready]({{puppet}}/upgrade_major_pre.html)
+            * [Upgrade Puppet Server and PuppetDB]({{puppet}}/upgrade_major_server.html)
+            * [Upgrade 3.x agents]({{puppet}}/upgrade_major_agent.html)
+            * [Updating 3.x manifests for Puppet 4.x]({{puppet}}/lang_updating_manifests.html)
+            * [Post-upgrade clean-up]({{puppet}}/upgrade_major_post.html)
+* **Migrating from PE 3.8**
+    * [Preparing for Migration to PE 2017.2](./migrate_pe_catalog_preview.html)
+    * [Migrating from PE 3.8 to 2017.2: monolithic](./migrate_monolithic.html)
+    * [Migrating: important notes](./migrate_notes.html)
+    * [Major path changes](./install_upgrading_path_changes.html)
+* **Developer info**
+    * [Debugging]({{puppetserver}}/dev_debugging.html)
+    * [Running from source]({{puppetserver}}/dev_running_from_source.html)
+    * [Tracing code events]({{puppetserver}}/dev_trace_func.html)
+    
+<h3>Administering and maintaining Puppet services</h3>
+
+* **Configuring**
+    * **Configuring PE**
+        * [Your PE infrastructure](./config_intro.html)
+        * [Java arguments for PE](./config_java_args.html)
+        * [Configuring ulimit for PE services](./config_ulimit.html) 
+        * [Writing configuration files](./config_hocon.html)
+        * [PE analytics data collection](./analytics_opt_out.html)
+        * [Static catalogs](./static_catalogs.html)
+    * **Configuring high availability**
+        * [High availability overview](./ha_overview.html)
+        * [Configure high availability](./ha_configure.html)
+    * **Configuring Puppet**
+        * [About Puppet's settings]({{puppet}}/config_about_settings.html)
+        * [Short list of important settings]({{puppet}}/config_important_settings.html)
+        * **Config files**
+            * [puppet.conf: The main config file]({{puppet}}/config_file_main.html)
+            * [environment.conf: Per-environment settings]({{puppet}}/config_file_environment.html)
+            * [auth.conf (LEGACY): HTTPS authorization]({{puppet}}/config_file_auth.html)
+            * [fileserver.conf: Custom fileserver mount points]({{puppet}}/config_file_fileserver.html)
+            * [puppetdb.conf: PuppetDB server locations]({{puppet}}/config_file_puppetdb.html)
+            * [hiera.yaml: Data lookup configuration]({{puppet}}/hiera_config_yaml_5.html)
+            * [autosign.conf: Basic certificate autosigning]({{puppet}}/config_file_autosign.html)
+            * [csr_attributes.yaml: Certificate extensions]({{puppet}}/config_file_csr_attributes.html)
+            * [custom_trusted_oid_mapping.yaml: Short names for cert extension OIDs]({{puppet}}/config_file_oid_map.html)
+            * [device.conf: Network hardware access]({{puppet}}/config_file_device.html)
+            * [routes.yaml: Advanced plugin routing]({{puppet}}/config_file_routes.html)
+        * **Configuring Puppet Server**
+            * [Puppet Server's config files]({{puppetserver}}/configuration.html)
+            * [puppetserver.conf: Main config file]({{puppetserver}}/config_file_puppetserver.html)
+            * [auth.conf: Access control]({{puppetserver}}/config_file_auth.html)
+            * [webserver.conf: Jetty web server config]({{puppetserver}}/config_file_webserver.html)
+            * [web-routes.conf: Mount points for component services]({{puppetserver}}/config_file_web-routes.html)
+            * [global.conf: Trapperkeeper settings]({{puppetserver}}/config_file_global.html)
+            * [ca.conf: CA service access control (deprecated)]({{puppetserver}}/config_file_ca.html)
+            * [master.conf: Authorization by HTTP header (deprecated)]({{puppetserver}}/config_file_master.html)
+            * [product.conf: Configuring Product-level Interactions (optional)]({{puppetserver}}/config_file_product.html)
+            * [logback.xml: Logging level and location]({{puppetserver}}/config_file_logbackxml.html)
+            * [Advanced logging configuration]({{puppetserver}}/config_logging_advanced.html)
+            * [Bootstrap upgrade notes]({{puppetserver}}/bootstrap_upgrade_notes.html)
+        * [Checking values of settings]({{puppet}}/config_print.html)
+        * [Editing settings on the command line]({{puppet}}/config_set.html)
+        * [Complete list of settings (configuration reference)]({{puppet}}/configuration.html)
+        * [Settings that differ under Puppet Server]({{puppetserver}}/puppet_conf_setting_diffs.html)
+        * **Advanced PE configuration and tuning**
+            * [Tuning Puppet Server](./config_puppetserver.html)
+            * [Tuning the console](./console_config.html)
+            * [Tuning PuppetDB](./config_puppetdb.html)
+            * [Tuning orchestration](./config_orchestration.html)
+            * [Tuning mono installs (reference)](./config_monolithic.html)
+* **Environments**
+    * [About environments]({{puppet}}/environments.html)
+    * [Configuring environments]({{puppet}}/environments_configuring.html)
+    * [Creating environments]({{puppet}}/environments_creating.html)
+    * [Assigning environments to nodes]({{puppet}}/environments_assigning.html)
+    * [Suggestions for use]({{puppet}}/environments_suggestions.html)
+    * [Limitations of environments]({{puppet}}/environments_limitations.html)
+    * [Environment isolation]({{puppet}}/environment_isolation.html)
+    * [Environments and Puppet's HTTPS interface]({{puppet}}/environments_https.html)
+* [About file sync](./cmgmt_filesync.html)
+* **Puppet's command-line interface**
+
+
+
+
+
+
+
+{% endmd %}
