@@ -93,7 +93,7 @@ documents:
   /pe/2017.1:
     doc: pe
     version: 2017.1
-    nav: ./_pe_toc.html
+    nav: /_includes/single_sidebar_2017.1.html
     external_source:
       repo: git@github.com:puppetlabs/pe-docs-private.git
       commit: origin/pe2017.1.1
@@ -288,7 +288,7 @@ documents:
   /puppet/4.10:
     doc: puppet
     version: "4.10"
-    nav: ./_puppet_toc.html
+    nav: /_includes/single_sidebar_2017.1.html
     my_versions:
       facter: 3.6
       hiera: 3.3
@@ -418,7 +418,7 @@ documents:
   /facter/3.6:
     doc: facter
     version: 3.6
-    nav: ./_facter_toc.html
+    nav: /_includes/single_sidebar_2017.1.html
   /facter/3.5:
     doc: facter
     version: 3.5
@@ -471,7 +471,7 @@ documents:
   /hiera/3.3:
     doc: hiera
     version: 3.3
-    nav: ./_hiera_toc.html
+    nav: /_includes/single_sidebar_2017.1.html
   /hiera/3.2:
     doc: hiera
     version: 3.2
@@ -496,7 +496,7 @@ documents:
   /puppetserver/2.7:
     doc: puppetserver
     version: 2.7
-    nav: /puppet/4.9/_puppet_toc.html
+    nav: /_includes/single_sidebar_2017.1.html
     external_source:
       repo: git://github.com/puppetlabs/puppetserver.git
       commit: b4fbbf035287318694e4313d5d3d3a9eea2d707a
@@ -610,7 +610,7 @@ documents:
   /puppetdb/4.4:
     doc: puppetdb
     version: 4.4
-    nav: ./_puppetdb_nav.html
+    nav: /_includes/single_sidebar_2017.1.html
     external_source:
       repo: git://github.com/puppetlabs/puppetdb.git
       commit: origin/stable
